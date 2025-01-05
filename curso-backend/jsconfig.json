@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "target": "ES6",       // Define que você está usando recursos modernos do JavaScript
+      "module": "commonjs",  // Especifica que está usando o padrão de módulos do Node.js
+      "checkJs": true,       // Ativa a verificação de erros no seu código JavaScript
+      "noEmit": true         // Impede a criação de arquivos .js adicionais
+    },
+    "exclude": [
+      "node_modules"         // Exclui a pasta node_modules da análise (melhora o desempenho)
+    ]
+  }
+  
