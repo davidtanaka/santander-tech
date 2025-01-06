@@ -1,26 +1,29 @@
 {
     "compilerOptions": {
-      /* Visit https://aka.ms/tsconfig to read more about this file */
-  
       /* Language and Environment */
-      "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+      "target": "ES2020",                                /* Definindo a versão do JavaScript para 2020 */
       
       /* Modules */
-      "module": "commonjs",                                /* Specify what module code is generated. */
-      "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
-  
+      "module": "NodeNext",                              /* Usando NodeNext para garantir compatibilidade com 'import.meta' */
+      "moduleResolution": "Node",                        /* Usando a resolução de módulos padrão do Node.js */
+      "esModuleInterop": true,                           /* Habilita a interoperabilidade entre ES Modules e CommonJS */
+      
       /* Type Checking */
-      "strict": true,                                      /* Enable all strict type-checking options. */
-      // "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
-      "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
-      "resolveJsonModule": true,
-      "experimentalDecorators": true,
-      "emitDecoratorMetadata": true,
-      "outDir": "dist"
-    },
-    "exclude": [
-      "ecommerce/**/*spec.ts",
-      "ecommerce/types.ts"
-    ],
-    "include": ["ecommerce/**/*.ts"]
+      "strict": true,                                    /* Habilita todas as opções de checagem estrita */
+      "skipLibCheck": true,                              /* Ignora a verificação de tipos nos arquivos .d.ts */
+      "resolveJsonModule": true,                         /* Habilita a importação de arquivos JSON */
+      "experimentalDecorators": true,                     /* Permite o uso de decoradores experimentais */
+      "emitDecoratorMetadata": true,                      /* Habilita a emissão de metadados para decoradores */
+      
+      /* Output */
+      "outDir": "dist",                                  /* Diretório de saída para os arquivos compilados */
+      
+      /* Include and Exclude */
+      "include": ["src/**/*.ts"],                         /* Incluir todos os arquivos .ts na pasta src */
+      "exclude": [
+        "node_modules",                                   /* Exclui a pasta node_modules */
+        "**/*.spec.ts"                                    /* Exclui arquivos de teste */
+      ]
+    }
   }
+  
